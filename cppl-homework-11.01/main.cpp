@@ -9,13 +9,20 @@
 #include <vector>
 #include <string>
 
-template <class T>
-std::vector<T> move_vectors(std::vector<T>& v1, std::vector<T>& v2)
+//template <class T>
+//std::vector<T> move_vectors(std::vector<T>& v1, std::vector<T>& v2)
+//{
+//        std::vector<T> tmp = std::move(v2);
+//        v2 = std::move(v1);
+//        v1 = std::move(tmp);
+//    return v2;
+//}
+
+void move_vectors(std::vector<std::string>& v1, std::vector<std::string>& v2)
 {
-        std::vector<T> tmp = std::move(v2);
+        std::vector<std::string> tmp = std::move(v2);
         v2 = std::move(v1);
         v1 = std::move(tmp);
-    return v2;
 }
 
 int main(int argc, const char * argv[]) {
